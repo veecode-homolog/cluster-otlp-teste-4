@@ -194,7 +194,7 @@ jobs:
 
       - name: Install Jaeger All in One
         run: |
-          helm upgrade --install jaeger-all-in-one jaeger-all-in-one/jaeger-all-in-one --wait --version 0.1.12 -n vkpr \
+          helm upgrade --install jaeger-all-in-one jaeger-all-in-one/jaeger-all-in-one --wait --version 0.1.12 -n vkpr --create-namespace \
             --set enableHttpOpenTelemetryCollector=true
           kubectl apply -f jaeger-service-nodeport-all-in-one.yaml -n vkpr
 

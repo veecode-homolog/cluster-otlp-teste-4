@@ -22,6 +22,9 @@ commonLabels:
   app.kubernetes.io/managed-by: vkpr
 grafana:
   additionalDataSources:
+  - name: Jaeger
+    type: jaeger
+    url: http://jaeger-all-in-one.vkpr:16686    
   - access: proxy
     basicAuth: false
     editable: true
